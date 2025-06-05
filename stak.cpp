@@ -99,6 +99,8 @@ int main (){
             cout << "exiting program."<< endl;
             break;
             default:
+            cout << "invalid choice. try again."<<endl;
+            break;
         }
        
 
