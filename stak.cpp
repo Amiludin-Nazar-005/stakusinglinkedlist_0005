@@ -13,13 +13,13 @@ public:
     }
 };
 
-class stak
+class stack
 {
 private:
     node *top;
 
 public:
-    stak()
+    stack()
     {
         top = NULL;
     }
@@ -69,3 +69,12 @@ public:
         }
     }
 };
+
+int main (){
+    stack stack;
+
+    int choice =0;
+    int value;
+
+
+}
