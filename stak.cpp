@@ -1,47 +1,71 @@
 #include <iostream>
 using namespace std;
 
-class node{
-    public:
+class node
+{
+public:
     int data;
-    node*next;
+    node *next;
 
-    node (){
+    node()
+    {
         next = NULL;
     }
 };
 
 class stak
 {
-    private:
-    node*top;
+private:
+    node *top;
 
-    public:
-    stak(){
+public:
+    stak()
+    {
         top = NULL;
     }
-    int push(int value){
-        node * newnode =new node();
+    int push(int value)
+    {
+        node *newnode = new node();
         newnode->data = value;
         newnode->next = top;
         top = newnode;
         cout << "push value: " << value << endl;
-        
+
         return value;
     }
 
-    bool isEmpty(){
-        return top ==NULL;
-    } 
+    bool isEmpty()
+    {
+        return top == NULL;
+    }
 
-    void pop(){
-        if (isEmpty()){
+    void pop()
+    {
+        if (isEmpty())
+        {
             cout << "stak is empty." << endl;
             return;
         }
-        cout << "poped value: " <<top->data<<endl;
+        cout << "poped value: " << top->data << endl;
         top = top->next;
     }
 
-};
+    void peek()
+    {
+        if (isEmpty())
+        {
+            cout << " list is empty " << endl;
+        }
 
+        else
+        {
+            node *current = top;
+            while (current != NULL)
+            {
+                cout << current->data << endl;
+                current = current->next;
+            }
+        cout <<endl;
+        }
+    }
+};
