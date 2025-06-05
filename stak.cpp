@@ -33,4 +33,15 @@ class stak
     bool isEmpty(){
         return top ==NULL;
     } 
+
+    void pop(){
+        if (isEmpty()){
+            cout << "stak is empty." << endl;
+            return;
+        }
+        cout << "poped value: " <<top->data<<endl;
+        top = top->next;
+    }
+
 };
+
