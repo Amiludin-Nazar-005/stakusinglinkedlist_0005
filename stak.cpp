@@ -96,7 +96,8 @@ int main (){
             stack.peek();
             break;
             case 4:
-            
+            cout << "exiting program."<< endl;
+            break;
         }
        
 
